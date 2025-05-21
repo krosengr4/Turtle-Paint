@@ -14,7 +14,7 @@ public class MainApp
         int width = 100;
         int height = 100;
 
-        // calculate the hypotenuse (diagonal)
+        // calculate the juicy juice hypotenuse (diagonal)
         // a2 + b2 = c2
         double widthSquared = Math.pow(width, 2);
         double heightSquared = Math.pow(height, 2);
