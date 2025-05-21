@@ -46,7 +46,7 @@ public class Turtle {
     private double theta;
 
     private Point2D.Double location;
-    private boolean isdown;
+    private boolean isDown;
     // private GeneralPath trail; // not used
     private Color color;
     private double shellSize;
@@ -89,7 +89,7 @@ public class Turtle {
         this.color = Turtle.base[Turtle.baseIndex];
         Turtle.baseIndex = (Turtle.baseIndex+1) % Turtle.base.length;
         this.penWidth = 1;
-        this.isdown = true;
+        this.isDown = true;
         this.shellSize = 8;
 
         w.addTurtle(this);
@@ -135,17 +135,17 @@ public class Turtle {
     /**
      * Stops the turtle from leaving a trail.
      */
-    public void penUp() { this.isdown = false; }
+    public void penUp() { this.isDown = false; }
     /**
      * Causes the turtle to leave a trail.
      */
-    public void penDown() { this.isdown = true; }
+    public void penDown() { this.isDown = true; }
 
     /**
      * Check the pen state
      * @return true if the pen is down, false otherwise
      */
-    public boolean isPenDown() { return this.isdown; }
+    public boolean isPenDown() { return this.isDown; }
 
     /**
      * Draws the shell of the turtle.
@@ -423,7 +423,7 @@ public class Turtle {
         double oy = this.location.y;
         this.location.x = x;
         this.location.y = y;
-        if (this.isdown) {
+        if (this.isDown) {
             world.drawLine(this.location, ox, oy, this.penWidth, this.color);
             world.turtleMoved();
             this.pause();
