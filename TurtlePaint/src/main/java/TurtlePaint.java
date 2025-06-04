@@ -11,7 +11,7 @@ public class TurtlePaint {
             switch (userHomeAction) {
                 case 1 -> processShapeOption();
                 case 2 -> processSaveOption();
-                case 3 -> ifContinue = false;
+                case 0 -> ifContinue = false;
                 default -> System.err.println("ERROR! Please enter the number of an option that was listed!");
             }
         }
@@ -47,12 +47,34 @@ public class TurtlePaint {
     }
 
     public void processSquare() {
-        System.out.println("Square");
+        int squareLength = ui.displaySquareOptions();
+        String shapeColor = processShapeColor();
+
+
+
     }
 
     public void processTriangle() {
         System.out.println("Triangle!");
     }
+
+    public String processShapeColor() {
+        int shapeColorChoice = ui.displayColorOptions();
+        String shapeColor = "";
+
+        switch (shapeColorChoice) {
+            case 1 -> shapeColor = "red";
+            case 2 -> shapeColor = "magenta";
+            case 3 -> shapeColor = "blue";
+            case 4 -> shapeColor = "cyan";
+            case 5 -> shapeColor = "green";
+            default -> System.err.println("ERROR! Please select a number that is in the list!");
+        }
+
+        return shapeColor;
+    }
+
+
 
 
 

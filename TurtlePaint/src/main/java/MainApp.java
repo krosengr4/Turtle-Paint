@@ -6,8 +6,9 @@ public class MainApp {
         System.out.println("\t\t\t-----------WELCOME TO TURTLE PAINT!-----------");
 
         TurtlePaint turtlePaint = new TurtlePaint();
+        turtlePaint.processMainMenuChoice();
 
-
+        System.out.println("\n\nThanks for using Turtle Paint!");
     }
 
     public static void drawSquareWithX() {
