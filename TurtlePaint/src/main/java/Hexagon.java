@@ -19,6 +19,7 @@ public class Hexagon extends Shape{
     }
     //endregion
 
+    @Override
     public void paint() {
         System.out.println("Paint the hexagon!");
     }
