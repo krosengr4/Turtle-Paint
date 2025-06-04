@@ -7,6 +7,34 @@ public class UserInterface {
 
     }
 
+    public int DisplayShapeChoice() {
+        System.out.println("\t\t---SHAPE OPTIONS:---");
+        System.out.println("1 - Square\n2 - Circle\n3 - Triangle");
+        return Utils.messageAndResponseInt("Which Shape Do You Choose?: ");
+    }
+
+    public int[] DisplayCircleOptions() {
+         int circleRadius = Utils.messageAndResponseInt("What is the radius?: ");
+         int circleDiameter = Utils.messageAndResponseInt("What is the width?: ");
+         return new int[] {circleRadius, circleDiameter};
+    }
+
+    public int displaySquareOptions() {
+        return Utils.messageAndResponseInt("What is the width?: ");
+    }
+
+    public int[] displayTriangleOptions() {
+        int triangleWidth = Utils.messageAndResponseInt("What is the width?: ");
+        int triangleHeight = Utils.messageAndResponseInt("What is the height: ");
+        return new int[] {triangleWidth, triangleHeight};
+    }
+
+    public int displayColorOptions() {
+        System.out.println("\t\t---COLOR OPTIONS:---");
+        System.out.println("1 - Red\n 2 - Magenta\n3 - Blue\n4 - Cyan\n5 - Green");
+        return Utils.messageAndResponseInt("Which Color Do You Choose?: ");
+    }
+
 
 
 }
