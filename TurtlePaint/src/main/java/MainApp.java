@@ -1,16 +1,20 @@
 import java.awt.*;
 
-public class MainApp
-{
-    public static void main(String[] args)
-    {
-        // This starter code to get you familiar with how
-        // the TurtleLogo application works
+public class MainApp {
+    public static void main(String[] args) {
 
+        System.out.println("\t\t\t-----------WELCOME TO TURTLE PAINT!-----------");
+
+        TurtlePaint turtlePaint = new TurtlePaint();
+
+
+    }
+
+    public static void drawSquareWithX() {
         // The world is your canvas
         World world = new World(200, 200, Color.BLACK);
-        Turtle turtle = new Turtle(world,-50, -50);
-        
+        Turtle turtle = new Turtle(world, -50, -50);
+
         int width = 100;
         int height = 100;
 
@@ -50,20 +54,5 @@ public class MainApp
 
         turtle.penDown();
         turtle.forward(hypotenuse);
-
-//        turtle.setPenWidth(5);
-//        turtle.setColor(Color.RED);
-//
-//        turtle.turnRight(45);
-//        turtle.forward(hypotenuse);
-//
-//        turtle.setColor(Color.GREEN);
-//
-//        turtle.penUp();
-//        turtle.goTo(-100, 100);
-//        turtle.turnRight(90);
-//
-//        turtle.penDown();
-//        turtle.forward(hypotenuse);
     }
 }
