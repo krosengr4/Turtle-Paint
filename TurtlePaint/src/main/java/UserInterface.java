@@ -9,7 +9,7 @@ public class UserInterface {
 
     public int DisplayShapeChoice() {
         System.out.println("\t\t---SHAPE OPTIONS:---");
-        System.out.println("1 - Square\n2 - Circle\n3 - Triangle");
+        System.out.println("1 - Square\n2 - Circle\n3 - Triangle\n4 - Go back");
         return Utils.messageAndResponseInt("Which Shape Do You Choose?: ");
     }
 
