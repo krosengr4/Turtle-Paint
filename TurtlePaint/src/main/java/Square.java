@@ -4,9 +4,8 @@ public class Square extends Shape {
 
     int sideLength;
 
-    public Square(Turtle turtle, Point location, String color, int border, int sideLength) {
-        super(turtle, location, color, border);
-        this.sideLength = sideLength;
+    public Square(Turtle turtle, Point location, String color, int borderWidth) {
+        super(turtle, location, color, borderWidth);
     }
 
     //region getters and setters

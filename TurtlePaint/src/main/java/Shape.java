@@ -5,13 +5,13 @@ public abstract class Shape {
     Turtle turtle;
     Point location; //<--- location of where to draw the shape
     String color; //<--- color used for border
-    int border; //<--- width of the shape border
+    int borderWidth; //<--- width of the shape border
 
     public Shape (Turtle turtle, Point location, String color, int border) {
         this.turtle = turtle;
         this.location = location;
         this.color = color;
-        this.border = border;
+        this.borderWidth = border;
     }
 
     //region getter and setters
@@ -39,12 +39,12 @@ public abstract class Shape {
         this.color = color;
     }
 
-    public int getBorder() {
-        return border;
+    public int getBorderWidth() {
+        return borderWidth;
     }
 
-    public void setBorder(int border) {
-        this.border = border;
+    public void setBorderWidth(int borderWidth) {
+        this.borderWidth = borderWidth;
     }
     //endregion
 

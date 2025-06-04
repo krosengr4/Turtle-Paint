@@ -1,6 +1,10 @@
+import java.awt.*;
+
 public class TurtlePaint {
 
     UserInterface ui = new UserInterface();
+
+    World world = new World(100, 100, Color.BLACK);
 
     public void processMainMenuChoice() {
         boolean ifContinue = true;
@@ -50,8 +54,11 @@ public class TurtlePaint {
         int squareLength = ui.displaySquareOptions();
         String shapeColor = processShapeColor();
 
+        Point location = new Point(25, 25);
+        Turtle turtle = new Turtle(25, 25, world);
 
-
+        Square square = new Square(turtle, location, shapeColor, squareLength);
+        square.paint();
     }
 
     public void processTriangle() {
@@ -73,9 +80,6 @@ public class TurtlePaint {
 
         return shapeColor;
     }
-
-
-
 
 
 }
