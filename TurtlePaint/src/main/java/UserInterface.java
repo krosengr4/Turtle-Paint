@@ -35,6 +35,20 @@ public class UserInterface {
         return Utils.messageAndResponseInt("Which Color Do You Choose?: ");
     }
 
+    public int displayConfirmation(Shape shape) {
+        System.out.println("Is this shape correct?");
+        String userShape = "";
 
+        if (shape instanceof Circle) {
+            userShape = "Circle";
+        } else if (shape instanceof Square) {
+            userShape = "Square";
+        } else if (shape instanceof Triangle) {
+            userShape = "Triangle";
+        }
+        System.out.printf("\n Shape: %s, Color: %s, Width: %d\n", userShape, shape.color, shape.borderWidth);
 
+        System.out.println("1 - Yes\n2 - No");
+        return Utils.messageAndResponseInt("Enter your option: ");
+    }
 }

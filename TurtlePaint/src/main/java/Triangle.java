@@ -30,7 +30,7 @@ public class Triangle extends Shape{
     //endregion
 
     @Override
-    public void paint() {
+    public void paint(Shape shape) {
         System.out.println("Paint the triangle!");
     }
 }

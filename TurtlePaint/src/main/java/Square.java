@@ -19,7 +19,16 @@ public class Square extends Shape {
     //endregion
 
     @Override
-    public void paint() {
-        System.out.println("Paint Square!");
+    public void paint(Shape shape) {
+        System.out.println("Square Painting!...");
+        Turtle turtle = shape.turtle;
+        turtle.setPenWidth(5);
+
+        turtle.forward(shape.borderWidth);
+
+
+
+
+
     }
 }

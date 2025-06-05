@@ -20,7 +20,7 @@ public class Circle extends Shape{
     //endregion
 
     @Override
-    public void paint() {
+    public void paint(Shape shape) {
         System.out.println("Paint the circle!");
     }
 }

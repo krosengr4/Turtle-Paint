@@ -48,6 +48,6 @@ public abstract class Shape {
     }
     //endregion
 
-    public abstract void paint();
+    public abstract void paint(Shape shape);
 
 }
